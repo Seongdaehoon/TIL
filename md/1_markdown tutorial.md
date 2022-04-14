@@ -83,3 +83,73 @@ To create a blockquote, all you have to do is preface a line with the "greater t
   canvas shoes dangling by their knotted laces over his shoulders and, picking a
   pointed salt-eaten stick out of the jetsam among the rocks, he clambered down
   the slope of the breakwater."
+
+## Lesson 6. Lists
+There are two types of lists in the known universe: _**unordered**_ and _**ordered**_. That's a fancy way of saying that there are lists with bullet points, and lists with numbers.
+1. To create an unordered list, you'll want to preface each item in the list with an asterisk(`*`).
+```
+* Milk
+* Eggs
+* Salmon
+* Butter
+```
+* Milk
+* Eggs
+* Salmon
+* Butter
+
+2. An order list is prefaced with numbers, instead of asterisks.
+```
+1. Crack three eggs over a bowl
+2. Pour a gallon of milk into the bowl
+3. Rub the salmon vigorously with butter
+4. Drop the salmon into the egg-milk bowl
+```
+
+3. to make list with more depth or to nest one list within another, all you have to do is to remember to indent each asterisk **_one or two_ space more than the preceding item**.
+```
+* Tintin
+  * A reporter
+  * Has poofy orange hair
+  * Friends with the world's most awesome dog
+* Haddock
+  * A sea captain
+  * Has a fantastic beard
+  * Loves whiskey
+    * Possibly also scotch?
+```
+* Tintin
+  * A reporter
+  * Has poofy orange hair
+  * Friends with the world's most awesome dog
+* Haddock
+  * A sea captain
+  * Has a fantastic beard
+  * Loves whiskey
+    * Possibly also scotch?
+
+4. There's one more trick to lists and indentation that we'll explore, and that deals with the case of paragraphs. Suppose you want to create a bullet list that requires some additional context (but not another list). 
+
+>1. Crack three eggs over a bowl.
+>
+>    Now, you're going to want to crack the eggs in such a way that you don't make a mess.
+>
+>    If you _do_ make a mess, use a towel to clean it up!
+>
+>2. Pour a gallon of milk into the bowl.
+>
+>    Basically, take the same guidance as above: don't be messy, but if you are, clean it up!
+>
+>3. Rub the salmon vigorously with butter.
+>
+>    By "vigorous," we mean a strictly vertical motion. Julia Child once quipped:
+>  > Up and down and all around, that's how butter on salmon goes.
+>4. Drop the salmon into the egg-milk bowl.
+>
+>    Here are some techniques on salmon-dropping:
+>
+>    * Make sure no trout or children are present
+>    * Use both hands
+>    * Always have a towel nearby in case of messes
+
+Notice that the first two items have a single space. This looks a bit odd, so you might want to indent properly to match the characters up (like items three and four). In these paragraphs, you can include all sorts of other Markdown elements, like blockquotes, or even other lists!
