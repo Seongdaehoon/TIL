@@ -79,6 +79,13 @@ Images also have two styles, just like links, and both of them render the exact 
 ## Lesson 5. Blockquotes
 If you need to call special attention to a quote from another source, or design a pull quote for a magazine article, then Markdown's _blockquote_ syntax will be useful. A blockquote is a sentence or paragrapth that's been specially formatted to draw attention to the reader.
 To create a blockquote, all you have to do is preface a line with the "greater than" caret (`>`).
+```
+> "In a few moments he was barefoot, his stockings folded in his pockets and his
+  canvas shoes dangling by their knotted laces over his shoulders and, picking a
+  pointed salt-eaten stick out of the jetsam among the rocks, he clambered down
+  the slope of the breakwater."
+```
+
 > "In a few moments he was barefoot, his stockings folded in his pockets and his
   canvas shoes dangling by their knotted laces over his shoulders and, picking a
   pointed salt-eaten stick out of the jetsam among the rocks, he clambered down
@@ -129,27 +136,52 @@ There are two types of lists in the known universe: _**unordered**_ and _**order
     * Possibly also scotch?
 
 4. There's one more trick to lists and indentation that we'll explore, and that deals with the case of paragraphs. Suppose you want to create a bullet list that requires some additional context (but not another list). 
+```
+1. Crack three eggs over a bowl.
 
->1. Crack three eggs over a bowl.
->
->    Now, you're going to want to crack the eggs in such a way that you don't make a mess.
->
+    Now, you're going to want to crack the eggs in such a way that you don't make a mess.
+
+    If you _do_ make a mess, use a towel to clean it up!
+
+2. Pour a gallon of milk into the bowl.
+
+    Basically, take the same guidance as above: don't be messy, but if you are, clean it up!
+
+3. Rub the salmon vigorously with butter.
+
+    By "vigorous," we mean a strictly vertical motion. Julia Child once quipped:
+  > Up and down and all around, that's how butter on salmon goes.
+4. Drop the salmon into the egg-milk bowl.
+
+    Here are some techniques on salmon-dropping:
+
+    * Make sure no trout or children are present
+    * Use both hands
+    * Always have a towel nearby in case of messes
+```
+>1. Crack three eggs over a bowl.  
+>    Now, you're going to want to crack the eggs in such a way that you don't make a mess.  
 >    If you _do_ make a mess, use a towel to clean it up!
 >
->2. Pour a gallon of milk into the bowl.
->
+>2. Pour a gallon of milk into the bowl.  
 >    Basically, take the same guidance as above: don't be messy, but if you are, clean it up!
 >
->3. Rub the salmon vigorously with butter.
->
+>3. Rub the salmon vigorously with butter.  
 >    By "vigorous," we mean a strictly vertical motion. Julia Child once quipped:
 >  > Up and down and all around, that's how butter on salmon goes.
->4. Drop the salmon into the egg-milk bowl.
->
->    Here are some techniques on salmon-dropping:
->
+>4. Drop the salmon into the egg-milk bowl.  
+>    Here are some techniques on salmon-dropping:  
 >    * Make sure no trout or children are present
 >    * Use both hands
 >    * Always have a towel nearby in case of messes
 
 Notice that the first two items have a single space. This looks a bit odd, so you might want to indent properly to match the characters up (like items three and four). In these paragraphs, you can include all sorts of other Markdown elements, like blockquotes, or even other lists!
+
+## Lesson 7. Paragraphs
+You can accomplish _soft break_ by inserting two spaces after each new line.
+
+Do I contradict myself?  
+Very well then I contradict myself,  
+(I am large, I contain multitudes.)
+
+
