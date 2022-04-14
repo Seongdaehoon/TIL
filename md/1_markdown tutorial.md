@@ -1,31 +1,28 @@
+# Markdown Tutorial _ 14. Apr, 2022
 
-
-Italics and Bold
----
+## Lesson 1. Italics and Bold
 1. Writing in Markdown is _not_ that hard! (Italics)
 2. I **will** complete these lessons! (Bold)
 3. "_Of course_," she whispered. Then, she shouted: "All I need is **a little moxie!**"
 4. If you're thinking to yourself, **_This is unbelievable_**, you'd probably be right.
 
----
-Headers
----
 
+## Lesson 2. Headers
 # Header one
 ## Header two
 ### Header three
 #### Header four
 ##### Header five
 ###### Header six
----
-Links
----
-1. _inline link_ 
+
+## Lesson 3. Links
+
+### 1. _inline link_ 
 : to create an inline link, you wrap the link thext in brackets ( `[ ]` ), and then you wrap the link in parenthesis ( `( )` ). 
 - [Visit Github](www.github.com)
 - [You're **really, really** going to want to see this.](www.dailykitten.com)
 - #### The Latest News from [the BBC](www.bbc.com/news)
-2. _reference link_ 
+### 2. _reference link_ 
 : As the name implies, the link is actually a reference to another place in the document. Here is an example of what we mean:
 
 ```
@@ -45,4 +42,36 @@ At the bottom of a Markdown document, these brackets are defined as proper links
 
 [a fun place]: www.zombo.com
 [another fun place]: www.stumbleupon.com
----
+
+
+## Lesson 4. Images
+
+Images also have two styles, just like links, and both of them render the exact same way. The difference between links and images is that images are prefaced with an exclamation point(`!`)
+1. _inline image link_
+: enter an exlamation point(`!`), wrap the alt text in brackets ( `[ ]` ), and then wrap the link in parenthesis (`( )`). Alt text is a phrease or sentence that describes the image for the visually impaired.
+
+```
+[Code]
+![A pretty tiger](https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg)
+```
+
+![A pretty tiger](https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg)
+
+2. _reference image link_: Similar patterns with link
+
+```
+[Code]
+![Black cat][Black]
+![Orange cat][Orange]
+
+[Black]: https://upload.wikimedia.org/wikipedia/commons/a/a3/81_INF_DIV_SSI.jpg
+[Orange]: http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/256/22221-cat-icon.png
+
+```
+
+![Black cat][Black]
+![Orange cat][Orange]
+
+[Black]: https://upload.wikimedia.org/wikipedia/commons/a/a3/81_INF_DIV_SSI.jpg
+[Orange]: http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/256/22221-cat-icon.png
+
