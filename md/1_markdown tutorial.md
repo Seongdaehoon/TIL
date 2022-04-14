@@ -8,12 +8,14 @@
 
 
 ## Lesson 2. Headers
+```
 # Header one
 ## Header two
 ### Header three
 #### Header four
 ##### Header five
 ###### Header six
+```
 
 ## Lesson 3. Links
 
@@ -60,7 +62,6 @@ Images also have two styles, just like links, and both of them render the exact 
 2. _reference image link_: Similar patterns with link
 
 ```
-[Code]
 ![Black cat][Black]
 ![Orange cat][Orange]
 
@@ -75,3 +76,10 @@ Images also have two styles, just like links, and both of them render the exact 
 [Black]: https://upload.wikimedia.org/wikipedia/commons/a/a3/81_INF_DIV_SSI.jpg
 [Orange]: http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/256/22221-cat-icon.png
 
+## Lesson 5. Blockquotes
+If you need to call special attention to a quote from another source, or design a pull quote for a magazine article, then Markdown's _blockquote_ syntax will be useful. A blockquote is a sentence or paragrapth that's been specially formatted to draw attention to the reader.
+To create a blockquote, all you have to do is preface a line with the "greater than" caret (`>`).
+> "In a few moments he was barefoot, his stockings folded in his pockets and his
+  canvas shoes dangling by their knotted laces over his shoulders and, picking a
+  pointed salt-eaten stick out of the jetsam among the rocks, he clambered down
+  the slope of the breakwater."
