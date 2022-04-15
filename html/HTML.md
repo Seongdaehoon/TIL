@@ -48,7 +48,7 @@
     </p>
 ```
 
-### Lesson 3. Emphasis (강조)
+### Lesson 3. Emphasis & Strong (강조)
 * 강조를 할때 사용하는 태그는 총 2종류가 있는데, `<strong>`과 `<em>`이 있음.
 ```
 <em>기울기 강조</em>
@@ -69,3 +69,81 @@
 ```
 * _**사실 이 부분은 CSS에서 모두 처리가 가능하기에 알고만 있자.**_
 
+### Lesson 4. Anchor (링크)
+* 현재 위치에서 다른 위치로 이동할 때 사용
+```
+<a href="주소"> 링크 </a>
+href 속성 : hypertext reference의 축약으로 주소값을 입력해준다
+```
+* href 표기방법
+1. 웹URL
+2. 페이지 내 이동 : id값을 사용한다
+```
+<a href="#hello"> hellow section으로 이동 </a>
+<section id="hello"> Hello Section입니다. </section>
+```
+3. 메일주소 사용
+```
+<a href="mailto:gibeks@hanmail.net">메일쓰기</a>
+```
+4. 전화걸기 : 
+```
+<a href="전화번호"></a>
+```
+* traget 속성 : target = "_blank" / _blank를 값으로 사용 시 새로운 탭으로 이동하게 해준다.
+
+### Lesson 5. Image (그림)
+```
+<img src="#" alt="/>
+src : source
+alt : alternative text / 대체 텍스트, 즉 Network가 느려 이미지 업로드가 느릴 때 그림 대신 보여주는 글
+```
+
+### Lesson 6. List (목록)
+* `<ul>`(unordred list), `<ol>`(ordered list) 총 2가지가 대표적이다
+* ul 또는 ol의 자식요소인 무조건 `<li>`만 사용 가능함. 즉 항목 1에 링크를 걸고 싶으면 `<li>`안에 `<a>`를 넣어야함.
+```
+<ul>
+  <li> 
+    <a href="#">항목1</a>
+  </li>
+  <li> 항목2 </li>
+</ul>
+```
+
+### Lesson 7. Description List (정의 목록)
+* 사용 목적
+  1. `용어`를 `정의`할 때 사용하는 리스트
+  2. `key:value`로 정보를 제공할 때
+* 태그 :
+  1. dl : description list / dl을 사용하는 범위
+  2. dt : description term / key값에 해당
+  3. dd : description data / value값에 해당
+     * dt와 dd는 하나의 묶음이며 같이 다녀야 한다.
+  4. dfn : definition
+
+```
+<dl>
+  <div> <!-- division으로 묶어도 되고 안묶어도 되고 개발자의 자율적으로 사용한다. -->
+    <dt>학습</dt>
+    <dd>
+      배워서 익히는 일. 교육학에서는, 지식의 획득, 인식의 발전, 습관의 형성 등을
+      목표로 하는 의식적 행동을 가리킴.
+    </dd>
+    <dd>
+      심리적, 행동적 경험을 쌓음으로써 행동의 양태가 변화, 발전하는 일
+    </dd>
+  </div>
+</dl>
+```
+
+### Lesson 8. Quotations (인용)
+```
+<!-- 어떤 문단 또는 내용 전체가 인용문일 경우 사용함 -->
+<!-- 인용 사이트를 알고 있을 경우 cite 속성을 추가하면 된다. -->
+<blockquote cite="#"> 인용 내용 </blockquote> 
+<!-- 출처명을 적을 때 사용-->
+<cite>출처 명</cite>
+<!-- 문장내 들어가는 인용문을 사용할 때 사용 / 따옴포"" 가 생김 -->
+<q> 인용내용 </q>
+```
