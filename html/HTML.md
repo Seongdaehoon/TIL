@@ -147,3 +147,58 @@ alt : alternative text / 대체 텍스트, 즉 Network가 느려 이미지 업�
 <!-- 문장내 들어가는 인용문을 사용할 때 사용 / 따옴포"" 가 생김 -->
 <q> 인용내용 </q>
 ```
+
+### Lesson 9. Form - 기본 구조
+* 사용자로부터 어떠한 정보나 데이터를 받고 싶을 때 사용한다.    
+  그래서 함께 사용할 속성이 많다.
+* form 태그에서는 action 속성을 반드시 작성해야한다. 사용자로 부터 받은 데이터를 전달할 대상이 있어야하기 때문이다.
+* action 값에 들어갈 API주소는 "back-end 개발자"에게서 받는다.
+* form안에 채울 다양한 필드Field 태그를 Lesson 10부터 공부한다.
+
+```
+<form action="API주소 입력" method="GET|POST"> </form>
+```
+
+## Lesson 10. Form - Input
+* type 속성을 항상 넣어주어야한다
+* 속성 종류 : [input 속성값 종류](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)  
+```
+<form action="" method="GET">
+      <input
+        type="text"
+        placeholder="아이디를 입력하세요"
+        minlength="5"
+        maxlength="13"
+        required
+      />
+      <input
+        type="text"
+        placeholder="공란입니다"
+        value="여기는 아무도 못건드려요"
+        disabled
+      />
+      <input type="email" placeholder="이메일을 입력하세요" />
+      <input
+        type="password"
+        placeholder="비밀번호를 입력하세요"
+        minlength="6"
+        required
+      />
+      <input type="url" placeholder="포트폴리오 URL을 적으시오" />
+      <input
+        type="number"
+        placeholder="나이를 입력하세요 (12세 이상 100세 이하)"
+        min="12"
+        max="100"
+      />
+      <input type="file" accept=".png, .jpg" />
+      <button>SUBMIT</button>
+</form>
+```
+* placeholder : 입력창에 대한 내용 설명을 적을때 사용하는 속성
+* minlength & maxlength : 최소/최대 입력 갯수
+* disabled : 입력 안되게 만들기
+* required : 반드시 form에서 입력값으로 사용되게 하기
+* email type : @가 들어가는 것을 확인
+* file type에서 accpet 속성 : 파일 확장자 범위를 제한할 수 있음.
+* number type에서 min/max 속성으로 최대/최소 값을 정할수 있음.
