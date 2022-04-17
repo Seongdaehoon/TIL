@@ -278,3 +278,139 @@ checkbox
 ```
 <button type="button or submit or reset"></button>
 ```
+
+### Lesson 15. Table - 기본구조
+* tr : table row / 표의 행을 의미함
+* td : table data / 셀의 데이터 입력 의미
+* th : table head / 셀이 제목임을 의미
+* thead : head부분이라는 것을 명시적으로 표현하기 위한 태그
+* tbody : body부분이라는 것을 명시적으로 표현하기 위한 태그
+* tfoot : foot부분(총계 라던지?)이라는 것을 명시적으로 표현하기 위한 태그
+```
+<table>
+  <!-- 헤더 부분 -->
+  <thead>
+    <tr>
+      <th> 테이블 헤더 </th>
+    </tr>
+  </thead>
+
+  <!-- 바디 부분 -->
+  <tbody>
+    <tr>
+      <td> 테이블 데이터 </td>
+    </tr>
+  </tbody>
+
+  <!-- 풋 부분 -->
+  <tfoot>
+    <tr>
+      <td> 테이블 데이터 </td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+### Lesson 16. Table - 심화
+* scope속성 : th 태그에만 사용하는 속성으로써 col에 대한 제목인지, row에 대한 제목인지 명시적으로 표기하는 것임
+* rowspan : 해당 셀을 기준으로 아래쪽으로 몇칸 합칠지 결정 
+* colspan : 해당 셀을 기준으로 오른쪽으로 몇칸 합칠지 결정
+
+```
+<table>
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">월</th>
+          <th scope="col">화</th>
+          <th scope="col">수</th>
+          <th scope="col">목</th>
+          <th scope="col">금</th>
+        </tr>
+      </thead>
+        <tr>
+          <th scope="row">1교시</th>
+          <td rowspan="2" class="html-css-basic">왕초보 HTML &amp; CSS</td>
+          <td class="coding">모각코</td>
+          <td rowspan="2" class="html-css-basic">왕초보 HTML &amp; CSS</td>
+          <td class="coding">모각코</td>
+          <td rowspan="2" class="html-css-basic">왕초보 HTML &amp; CSS</td>
+        </tr>
+        <tr>
+          <th scope="row">2교시</th>
+          <td rowspan="2" class="js-skillup">Javascript 스킬업</td>
+          <td rowspan="2" class="js-skillup">Javascript 스킬업</td>
+        </tr>
+        <tr>
+          <th scope="row">3교시</th>
+          <td class="js-basic">Javascript 시작반</td>
+          <td class="js-basic">Javascript 시작반</td>
+          <td class="js-basic">Javascript 시작반</td>
+        </tr>
+        <tr>
+            <th colspan="6" scope="row">점심시간</th>
+        </tr>
+        <tr>
+            <th scope="row">4교시</th>
+            <td class="sass-basic">SASS 기초반</td>
+            <td rowspan="2" class="portfolio">HTML &amp; CSS 포트폴리오반</td>
+            <td rowspan="2">Open Seminar</td>
+            <td rowspan="2" class="portfolio">HTML &amp; CSS 포트폴리오반</td>
+            <td class="sass-basic">SASS 기초반</td>
+        </tr>
+        <tr>
+            <th scope="row">5교시</th>
+            <td class="coding">모각코</td>
+            <td class="coding">모각코</td>
+        </tr>
+      </tbody>
+</table>
+```
+<table>
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">월</th>
+          <th scope="col">화</th>
+          <th scope="col">수</th>
+          <th scope="col">목</th>
+          <th scope="col">금</th>
+        </tr>
+      </thead>
+        <tr>
+          <th scope="row">1교시</th>
+          <td rowspan="2" class="html-css-basic">왕초보 HTML &amp; CSS</td>
+          <td class="coding">모각코</td>
+          <td rowspan="2" class="html-css-basic">왕초보 HTML &amp; CSS</td>
+          <td class="coding">모각코</td>
+          <td rowspan="2" class="html-css-basic">왕초보 HTML &amp; CSS</td>
+        </tr>
+        <tr>
+          <th scope="row">2교시</th>
+          <td rowspan="2" class="js-skillup">Javascript 스킬업</td>
+          <td rowspan="2" class="js-skillup">Javascript 스킬업</td>
+        </tr>
+        <tr>
+          <th scope="row">3교시</th>
+          <td class="js-basic">Javascript 시작반</td>
+          <td class="js-basic">Javascript 시작반</td>
+          <td class="js-basic">Javascript 시작반</td>
+        </tr>
+        <tr>
+            <th colspan="6" scope="row">점심시간</th>
+        </tr>
+        <tr>
+            <th scope="row">4교시</th>
+            <td class="sass-basic">SASS 기초반</td>
+            <td rowspan="2" class="portfolio">HTML &amp; CSS 포트폴리오반</td>
+            <td rowspan="2">Open Seminar</td>
+            <td rowspan="2" class="portfolio">HTML &amp; CSS 포트폴리오반</td>
+            <td class="sass-basic">SASS 기초반</td>
+        </tr>
+        <tr>
+            <th scope="row">5교시</th>
+            <td class="coding">모각코</td>
+            <td class="coding">모각코</td>
+        </tr>
+      </tbody>
+</table>
