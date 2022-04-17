@@ -159,7 +159,7 @@ alt : alternative text / 대체 텍스트, 즉 Network가 느려 이미지 업�
 <form action="API주소 입력" method="GET|POST"> </form>
 ```
 
-## Lesson 10. Form - Input
+### Lesson 10. Form - Input
 * type 속성을 항상 넣어주어야한다
 * 속성 종류 : [input 속성값 종류](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)  
 ```
@@ -202,3 +202,79 @@ alt : alternative text / 대체 텍스트, 즉 Network가 느려 이미지 업�
 * email type : @가 들어가는 것을 확인
 * file type에서 accpet 속성 : 파일 확장자 범위를 제한할 수 있음.
 * number type에서 min/max 속성으로 최대/최소 값을 정할수 있음.
+
+### Lesson 11. Form - Label
+* 폼 양식에 이름을 붙이는 태그
+* 문법적으로 지켜야할 규칙이 있음 / lebel이 어떠한 form과 연결이 되어 있는지 명시해야하며 `for` 속성을 사용하여 해당 form의 `#id`값을 넣어준다
+```
+<label for="abc"> 라벨 </label>
+<input id="abc" type="text" />
+```
+
+### Lesson 11. Form - Radio & Checkbox
+* Radio 타입은 항상 `name`과 `value` 속성을 함께 사용해야한다. `name`속성으로 radio들을 grouping 해주고, `value`를 통해 backend에 전달할 고유 값을 지정할 수 있다.
+* 아래의 코드는 subscription의 그룹에서 구독중일 때 1, 미구독일 때 0의 고유값을 가지고 있다.
+```
+radio
+<form action="" method="GET">
+  <input type="radio" name="subscription" value="1" id="subscribed" />
+  <label for="subscribed">구독중</label>
+  <input type="radio" name="subscription" value="0" id="unsubscribed" />
+  <label for="unsubscribed">미구독</label>
+  <button type="submit">submit</button>
+</form>
+```
+* Checkbox 타입은 Radio와 비슷하나 굳이 name으로 grouping이 될 필요는 없음. name은 각 box의 고유 변수명이 됨
+```
+checkbox
+ <h1>사용가능언어</h1>
+<form action="" method="GET">
+  <input type="checkbox" id="html" name="skill" value="0" />
+  <label for="html">HTML</label>
+  <input type="checkbox" id="css" name="skill" value="1" />
+  <label for="css">CSS</label>
+  <input type="checkbox" id="javascript" name="skill" value="2" />
+  <label for="javascript">JavaScript</label>
+
+  <button type="submit">submit</button>
+</form>
+```
+
+### Lesson 12. Form - Select & Option
+* name은 굳이 각 option들에 붙일 필요 없이 select태그에 붙이면 됩니다.
+* select 아래 option태그를 통해서 여러 옵션을 넣어 줍니다. 그리고 value 속성을 통해 고유 값을 지정하여 추 후에 선택 후 backend에 전달할 value를 지정해줍니다.
+* `multiple`속성을 넣을 경우 여러개를 선택할수 있음. ~~그러나 유용하지 않아 보입니다.~~
+```
+<form action="" method="GET">
+      <label for="skill">스킬</label>
+      <select name="skill" id="skill">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JAVASCRIPT</option>
+      </select>
+      <button type="submit">submit</button>
+</form>
+```
+
+### Lesson 13. Form - Textarea
+* `<input type="text"/>`는 한줄의 글만 전달 할수 있다면 `textarea`태그는 여러개의 글을 전달할 수 있음.
+```
+<form action="" method="GET">
+      <label for="filed"></label>
+      <textarea
+        name="good"
+        id="filed"
+        cols="30"
+        rows="10"
+        placeholder="자기소개를 입력하세요"
+      ></textarea>
+      <br />
+      <button type="submit">submit</button>
+</form>
+```
+
+### Lesson 14. Form - Button
+* 버튼 type의 종류 : button, submit/form을 제출할 때만 명시, ~~reset/잘 쓰지 않는다.~~ 
+```
+<button type="button or submit or reset"></button>
+```
