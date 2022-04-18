@@ -415,4 +415,69 @@ checkbox
       </tbody>
 </table>
 
+### Lesson 17. etc
+1. Abbr 태그
+* Abbreviation : 커서를 가져다 댔을 경우 상세 내용을 나타나게 해준다.
+```
+<p>
+  너... 혹시<abbr title="Attention Deficit Hyperactivity Disorder">ADHD</abbr>니?
+</p>
+```
+<p>
+  너... 혹시<abbr title="Attention Deficit Hyperactivity Disorder">ADHD</abbr>니? (ADHD에 커서를 올려보세요)
+</p>
+
+2. Address 태그
+* 연락처에 대한 내용을 마크업할 때 사용
+* 연락처의 예시 : (1) 물리적 주소 (2) URL (3) 이메일 (4) 전화번호 (5) sns연결링크
+```
+<address>
+  <h1>
+    김버그
+  </h1>
+  <a href="https://youtube.com/c/kimbug">https://youtube.com/c/kimbug</a>
+</address>
+```
+<address>
+  <h1>
+    김버그
+  </h1>
+  <a href="https://youtube.com/c/kimbug">https://youtube.com/c/kimbug</a>
+</address>
+
+3. pre 태그, code 태그
+* pre : preformatted text / 사용자가 작성한 대로 그대로 화면에 나옴
+* code : 코드를 작성하고 싶을 때 사용한다.
+* 보통 pre와 code를 같이 쓴다. 왜냐하면 작성한 그대로 여백, 칸내리기가 나타나기 때문이다.
+```
+<pre>
+  <code>
+    console.log('hellow kimbug');
+      var kimbug = 'kimbug';
+  </code>
+</pre>
+```
+<pre>
+  <code>
+    console.log('hellow kimbug');
+      var kimbug = 'kimbug';
+  </code>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
