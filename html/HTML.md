@@ -423,9 +423,7 @@ checkbox
   너... 혹시<abbr title="Attention Deficit Hyperactivity Disorder">ADHD</abbr>니?
 </p>
 ```
-<p>
-  너... 혹시<abbr title="Attention Deficit Hyperactivity Disorder">ADHD</abbr>니? (ADHD에 커서를 올려보세요)
-</p>
+
 
 2. Address 태그
 * 연락처에 대한 내용을 마크업할 때 사용
@@ -438,12 +436,7 @@ checkbox
   <a href="https://youtube.com/c/kimbug">https://youtube.com/c/kimbug</a>
 </address>
 ```
-<address>
-  <h1>
-    김버그
-  </h1>
-  <a href="https://youtube.com/c/kimbug">https://youtube.com/c/kimbug</a>
-</address>
+
 
 3. pre 태그, code 태그
 * pre : preformatted text / 사용자가 작성한 대로 그대로 화면에 나옴
