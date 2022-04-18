@@ -458,19 +458,47 @@ checkbox
 </pre>
 
 
+### Lesson 18. Doctype and Document structure
+* `<!DOCTYPE html>`의 의미.  
+이 문서가 HTML5 버전으로 작성이 될거라는 의미를 명시적으로 표현하여 브라우저가 인식함.
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--메타정보가 들어가는 곳 -->
+  </head>
 
+  <body>
+   <!-- 문서에 들어갈 내용 -->
+  </body>
+</html>
+	
+```
 
+### Lesson 19. Ttile, Link, Style & Script
+1. Title태그 : 브라우저에 나타난 문서의 대제목을 나타낸다.  
+`<title> 대제목 </title>`
+* 검색 최적화에 중요함. 검색 최적화를 위한 팁!  
+   * 키워드 단순 나열은 비추.  
+   * 페이지마다 그에 맞게 변경
 
+2. Link 태그 : CSS 파일, favicon을 문서에 첨부할 때 사용  
+`<link rel="stylesheet" href="상대경로">`
 
+3. style 태그 : html 내에서 css 파일을 사용하고 싶을 때 사용
 
+4. script 태그 : html 내에서 javascript 파일을 첨부하고 싶을 때 사용
+`<script src="상대경로"></script>`
+* 왜 script는 head가 아닌 body안에 넣을까?   
+: 렌더 속도를 높이기 위함
 
-
-
-
-
-
-
-
-
-
+### lesson 20. Metatag
+* name = viewport 가 매우 중요하다. 현재 보이는 페이지의 view가 어느 디바이스에서 적합한지 정보를 반드시 기록해야한다.
+```
+<meta name="메타데이터 종류" content="메타데이터값">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="성대훈">
+<meta name="keywords" content="다니성, 호주생활, 코딩, 웹개발">
+<meta name="description" content="연습용 페이지입니다.">
+```
 
