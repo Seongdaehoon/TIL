@@ -492,7 +492,7 @@ checkbox
 * 왜 script는 head가 아닌 body안에 넣을까?   
 : 렌더 속도를 높이기 위함
 
-### lesson 20. Metatag
+### lesson 20. Meta tag
 * name = viewport 가 매우 중요하다. 현재 보이는 페이지의 view가 어느 디바이스에서 적합한지 정보를 반드시 기록해야한다.
 ```
 <meta name="메타데이터 종류" content="메타데이터값">
@@ -501,4 +501,16 @@ checkbox
 <meta name="keywords" content="다니성, 호주생활, 코딩, 웹개발">
 <meta name="description" content="연습용 페이지입니다.">
 ```
+
+### Lesson 21. 구조적인 웹 문서 설계란?
+* 글의 구조를 쉽게 파악할 수 있게 HTML을 작성한다는 뜻
+* 책의 목차를 보면서 사전에 글의 맥락을 파악하는 것과 같음
+  1. 챕터의 개수와 구성 파악 가능
+  2. 각 챕터의 제목 파악 가능
+  3. 각 챕터 내 소단원 및 소단원의 주제 파악 가능
+* 글의 전개 흐름을 쉽게 파악하고 정보의 위계질서 파악 가능
+* 브라우저도 개요가 필요함. 왜냐하면 검색 최적화에 꼭 필요하기 때문이다.
+* 이러한 구조화를 위해 사용하는 것이 Sectioning element 다. : section, article, nav, aside
+* header, main, footer도 사용됨
+* 즉, 구조적인 웹문서 설계는 Sectioning element를 활용하여 정보를 잘 나열하는 것이다.
 
