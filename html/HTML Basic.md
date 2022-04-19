@@ -514,3 +514,36 @@ checkbox
 * header, main, footer도 사용됨
 * 즉, 구조적인 웹문서 설계는 Sectioning element를 활용하여 정보를 잘 나열하는 것이다.
 
+### Lesson 22. 올바른 Sectioning Elements 사용방법
+* section, article, nav, aside
+* Sectioning elements = 단원
+* 각 단원은 제목과 주제를 가지고 있다. 그래서 각 Sectioning element 내에는 반드시 heading 태그를 작성해야 한다.
+```
+<section>
+  <!-- section에 대한 주제를 아래와 같이 heading tag를 이용해서 표현함 -->
+  <h1> 섹션의 제목 </h1>
+  <p> 섹션의 내용 </p>
+</section>
+```
+```
+<nav>
+  <!-- nav에 대한 주제를 아래와 같이 heading tag를 이용해서 표현함 -->
+  <h1> 메뉴 </h1>
+  <ul>
+    <li>
+       <a href="#"> 링크 </a>
+    </li>
+  </ul>
+</nav>
+```
+
+
+
+
+
+
+
+
+
+
+
