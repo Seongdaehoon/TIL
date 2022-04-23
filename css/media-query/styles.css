@@ -1,0 +1,104 @@
+/*
+ * RED #ff4949
+ * ORANGE #ff5216
+ * YELLOW #ffc82c
+ * GREEN #13ce66
+ * BLUE #1fb6ff
+ * PURPLE #7e5bef
+ * PINK #ff49db
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppines", sans-serif;
+  color: #212529;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ff4949;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.box > img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.box::after {
+  content: "Mobile";
+}
+
+@media screen and (min-width: 576px) {
+  .box {
+    background-color: #ff5216;
+  }
+
+  .box::after {
+    content: "Landscape Phone";
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    background-color: #ffc82c;
+  }
+  .box::after {
+    content: "Tablet";
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .box > img {
+    animation: rotate 1500ms infinite;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .box {
+    background-color: #13ce66;
+  }
+  .box::after {
+    content: "Desktop";
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box {
+    background-color: #1fb6ff;
+  }
+  .box::after {
+    content: "Large Desktop";
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .box {
+    background-color: #7e5bef;
+  }
+  .box::after {
+    content: "Large Desktop";
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
