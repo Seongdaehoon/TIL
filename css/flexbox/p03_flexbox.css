@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: #273444;
+  background-color: #d3d3d3;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 390px;
+  height: 304px;
+  border-radius: 16px;
+  background-color: white;
+  padding: 32px 40px;
+}
+
+.profile-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-user-info > img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.profile-user-info > h1 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.profile-detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+.profile-user-info > strong {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #8492a6;
+}
+
+.profile-detail-item > dt {
+  color: #8492a6;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.profile-detail-item > dd {
+  color: #0066ff;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 300;
+  text-align: center;
+}
