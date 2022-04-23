@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans CJK KR", sans-serif;
+  letter-spacing: -0.02em;
+  background-color: #d3d3d3;
+}
+
+.mail-picture {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.mail-content > h1 {
+  font-size: 16px;
+  line-height: 20px;
+  color: #1f2d3d;
+  margin-bottom: 4px;
+}
+
+.mail-content > span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #afb3b9;
+}
+
+.mail-content > p {
+  margin-top: 12px;
+  font-family: "SpoqaHanSans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #79818b;
+}
+
+.mail {
+  width: 540px;
+  padding: 20px;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: flex-start;
+}
