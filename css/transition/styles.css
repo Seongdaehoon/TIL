@@ -1,0 +1,29 @@
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #0066ff;
+  animation-name: movement;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 500px;
+    background-color: red;
+  }
+  100% {
+    top: 0;
+  }
+}
