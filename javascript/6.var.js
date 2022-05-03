@@ -26,4 +26,4 @@ console.log(apple);
 function example() {
   var dog = "🐶";
 }
-console.log(dog);
+// console.log(dog);
