@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window size test</title>
+    <style>
+      .container {
+        display: inline-block;
+        background-color: thistle;
+        padding: 16px;
+        margin-top: 60px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      const updateTag = () => {
+        container.innerHTML = `
+        window.outer: ${window.screen.width}, ${window.screen.height} <br/>
+        window.outer: ${window.outerWidth}, ${window.outerHeight} <br/>
+        window.inner: ${window.innerWidth}, ${window.innerWidth} <br/>
+        documentElement.client: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+        `;
+      };
+      window.addEventListener("resize", () => {
+        updateTag();
+      });
+      updateTag();
+    </script>
+  </body>
+</html>
