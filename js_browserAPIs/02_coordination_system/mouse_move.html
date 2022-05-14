@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .line {
+        position: absolute;
+        width: 4.5em;
+        height: 1em;
+        color: white;
+        font-size: 40px;
+        background-color: black;
+        cursor: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      const lineX = document.createElement("div");
+      lineX.classList.add("line");
+      container.append(lineX);
+      document.addEventListener("mousemove", (e) => {
+        lineX.style.left = `${e.clientX}px`;
+        lineX.style.top = `${e.clientY}px`;
+        lineX.innerText = `${e.clientX}, ${e.clientY}`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coordinates</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        background-color: #000;
+      }
+      .box {
+        background-color: lightcoral;
+        width: 250px;
+        height: 250px;
+        margin: 5px;
+        border-radius: 5%;
+      }
+      .box.active {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      const number = 20;
+      for (let i = 0; i < number; i++) {
+        const box = document.createElement("div");
+        box.classList.add("box");
+        container.appendChild(box);
+      }
+
+      document.addEventListener("click", (event) => {
+        const selectedBox = event.target;
+        if (selectedBox.classList.contains("active")) {
+          selectedBox.classList.remove("active");
+        } else {
+          selectedBox.classList.add("active");
+        }
+        console.log(selectedBox.getBoundingClientRect());
+        console.log(
+          "clients",
+          selectedBox.getBoundingClientRect().x,
+          selectedBox.getBoundingClientRect().y
+        );
+        console.log(
+          "pages",
+          selectedBox.getBoundingClientRect().x + window.scrollX,
+          selectedBox.getBoundingClientRect().y + window.scrollY
+        );
+      });
+    </script>
+  </body>
+</html>

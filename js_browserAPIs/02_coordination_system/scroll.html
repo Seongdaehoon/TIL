@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll To</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        background-color: rgb(44, 43, 43);
+      }
+
+      .box {
+        width: 250px;
+        height: 250px;
+        margin: 5px;
+        border-radius: 10%;
+        background-color: lightsalmon;
+      }
+
+      .box.active {
+        background-color: orange;
+      }
+      .right {
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box active"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="right">
+      <button type="button" id="btn1">Scroll to 100px(y)</button>
+      <button type="button" id="btn2">Scroll by 100px(y)</button>
+      <button type="button" id="btn3">Scroll into active box</button>
+    </div>
+    <script>
+      const btn1 = document.querySelector("#btn1");
+      const btn2 = document.querySelector("#btn2");
+      const btn3 = document.querySelector("#btn3");
+
+      const active = document.querySelector(".active");
+
+      const scrollTo = () => {
+        window.scrollTo({ top: 100, left: 0, behavior: "smooth" });
+      };
+
+      const scrollBy = () => {
+        window.scrollBy({ top: 100, left: 0, behavior: "smooth" });
+      };
+
+      const scrollActive = () => {
+        active.scrollIntoView({ behavior: "smooth" });
+      };
+
+      btn1.onclick = scrollTo;
+      btn2.onclick = scrollBy;
+      btn3.onclick = scrollActive;
+    </script>
+  </body>
+</html>
