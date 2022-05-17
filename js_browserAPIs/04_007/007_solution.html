@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+      }
+      .line {
+        position: absolute;
+        background-color: white;
+      }
+      .horizontal {
+        width: 100%;
+        height: 1px;
+        /* top: 50%; */
+      }
+      .vertical {
+        height: 100%;
+        width: 1px;
+        /* left: 50%; */
+      }
+      .target {
+        position: absolute;
+        /* left: 50%;
+        top: 50%; */
+        transform: translate(-50%, -50%);
+      }
+      .tag {
+        position: absolute;
+        color: white;
+        /* top: 50%;
+        left: 50%; */
+        font-size: 38px;
+        /* transform: translate(20px, 20px); */
+        margin: 20px;
+      }
+      .click {
+        position: fixed;
+        color: white;
+        font-size: 38px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="click"></div>
+    <div class="line horizontal"></div>
+    <div class="line vertical"></div>
+    <img src="imgs/target.png" alt="target" class="target" />
+    <span class="tag"></span>
+    <script>
+      const vertical = document.querySelector(".vertical");
+      const horizontal = document.querySelector(".horizontal");
+      const target = document.querySelector(".target");
+      const tag = document.querySelector(".tag");
+      const targetRect = target.getBoundingClientRect();
+      const targetHalfwidth = targetRect.width / 2;
+      const targetHalfheight = targetRect.height / 2;
+
+      const click = document.querySelector(".click");
+      let num = 0;
+
+      window.addEventListener("mousemove", (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        // css trigger에 따른 성능 개선 시도
+        vertical.style.transform = `translate(${x}px,0px)`;
+        horizontal.style.transform = `translate(0px,${y}px)`;
+        target.style.transform = `translate(${x - targetHalfwidth}px,${
+          y - targetHalfheight
+        }px)`;
+        tag.style.transform = `translate(${x}px,${y}px)`;
+        // vertical.style.left = `${x}px`;
+        // horizontal.style.top = `${y}px`;
+        // target.style.left = `${x}px`;
+        // target.style.top = `${y}px`;
+        // tag.style.left = `${x}px`;
+        // tag.style.top = `${y}px`;
+
+        tag.innerText = `${x}, ${y}`;
+      });
+      window.addEventListener("click", () => {
+        num++;
+        click.innerHTML = `${num}번`;
+      });
+    </script>
+  </body>
+</html>

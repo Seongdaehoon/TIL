@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>007</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        background-color: black;
+      }
+      .container {
+        position: absolute;
+        color: white;
+      }
+      .line-x {
+        position: absolute;
+        background-color: white;
+        width: 100vw;
+        height: 1px;
+      }
+      .line-y {
+        position: absolute;
+        background-color: white;
+        width: 1px;
+        height: 100vh;
+      }
+
+      .target {
+        position: absolute;
+        top: -60px;
+        left: -60px;
+        width: 120px;
+        height: 120px;
+        background-image: url("./imgs/target.png");
+      }
+      .text {
+        position: absolute;
+        font-size: 24px;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <script>
+      const container = document.querySelector(".container");
+
+      const lineX = document.createElement("div");
+      lineX.classList.add("line-x");
+
+      const lineY = document.createElement("div");
+      lineY.classList.add("line-y");
+
+      const img = document.createElement("div");
+      img.classList.add("target");
+
+      const text = document.createElement("div");
+      text.classList.add("text");
+
+      container.append(lineX, lineY, img, text);
+      window.addEventListener("mousemove", mouseMove);
+      function mouseMove(e) {
+        container.style.left = `${e.clientX}px`;
+        container.style.top = `${e.clientY}px`;
+
+        lineX.style.left = `-${e.clientX}px`;
+        lineY.style.top = `-${e.clientY}px`;
+
+        text.innerText = `${e.clientX}, ${e.clientY}`;
+      }
+    </script>
+  </body>
+</html>
