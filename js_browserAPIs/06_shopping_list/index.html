@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+
+    <script
+      src="https://kit.fontawesome.com/cd4d636144.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppines";
+        background-color: #000;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+      }
+      input {
+        font-size: 16px;
+        padding: 10px 30px;
+        border: none;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .title {
+        padding: 10px;
+        font-size: 35px;
+        text-align: center;
+        color: white;
+      }
+      .shop {
+        position: relative;
+        background-color: #f8b400;
+        width: 350px;
+        height: 500px;
+        margin: 50px auto;
+        border-radius: 5%;
+      }
+      .shop-list {
+        background-color: #faf5e4;
+        display: block;
+        height: 350px;
+        overflow: auto;
+      }
+      .shop-list li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 30px;
+      }
+      .addBtn > button {
+        display: block;
+        margin: 10px auto;
+        font-size: 32px;
+        cursor: pointer;
+      }
+
+      .inputItem {
+        display: block;
+        width: 100%;
+      }
+      .fa-solid {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shop">
+      <h1 class="title">Shipping List</h1>
+      <ul class="shop-list"></ul>
+      <form action="#" method="post">
+        <input type="text" class="inputItem" placeholder="Enter Items" />
+      </form>
+      <div class="addBtn">
+        <button type="button"><i class="fa-solid fa-circle-plus"></i></button>
+      </div>
+    </main>
+    <script>
+      const addBtn = document.querySelector(".addBtn > button");
+      const shopList = document.querySelector(".shop-list");
+      addBtn.addEventListener("click", () => {
+        const li = document.createElement("li");
+        const inputBoxText = document.querySelector(".inputItem");
+        if (inputBoxText.value !== "") {
+          li.innerHTML = `
+                        ${inputBoxText.value}<i class="fa-solid fa-trash-can"></i>
+                      `;
+          shopList.appendChild(li);
+          inputBoxText.value = "";
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        const target = e.target.parentElement;
+        if (target.localName === "li") {
+          target.remove();
+        }
+      });
+    </script>
+  </body>
+</html>
