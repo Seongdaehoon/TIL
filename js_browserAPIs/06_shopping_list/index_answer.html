@@ -135,6 +135,7 @@
         }
         const item = createItem(text);
         items.appendChild(item);
+        item.scrollIntoView({ behavior: "smooth", block: "center" });
         input.value = ``;
         input.focus();
       }
@@ -173,7 +174,9 @@
       });
 
       input.addEventListener("keypress", (event) => {
-        console.log("key");
+        if (event.key === "Enter") {
+          onAdd();
+        }
       });
     </script>
   </body>
