@@ -27,16 +27,28 @@
     <div></div>
     <div></div>
     <script>
-      document.addEventListener('wheel', event => {
-        console.log('scrolling');
-        event.preventDefault();
-      });
-      const checkbox = document.querySelector('input');
-      checkbox.addEventListener('click', event => {
-        // long
-        console.log('checked');
-        event.preventDefault();
-      });
+      //event마다 active 또는 passive한 동작이 있다.
+      // 기본적으로 passive인 event는 preventDefult()동작을 하지 않도록 Block해놨음
+      // 만약 강제적으로 passive를 active로 변경을 하고 싶을 경우, addEventListener에서
+      //option으로 {passive : false}로 설정을 해주면 된다. 그럼 preventDefult()가 동작함.
+      document.addEventListener(
+        "wheel",
+        (event) => {
+          console.log("scrolling");
+          event.preventDefault();
+        },
+        { passive: false }
+      );
+      const checkbox = document.querySelector("input");
+      checkbox.addEventListener(
+        "click",
+        (event) => {
+          // long
+          event.preventDefault();
+          console.log("checked");
+        },
+        { passive: true }
+      );
     </script>
   </body>
 </html>
